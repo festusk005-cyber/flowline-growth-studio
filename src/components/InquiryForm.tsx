@@ -32,9 +32,9 @@ export function InquiryForm() {
       phone: f.get("phone") || undefined, organization: f.get("organization") || undefined,
       business_type: type, needs, message: f.get("message") || undefined,
     });
-    if (!parsed.success) return setError(parsed.error.issues[0].message);
+    if (!parsed.success) return setError(parsed.error.issues[0]?.message ?? "Please check the form");
     setStatus("sending");
-    const { error } = await supabase.from("project_inquiries").insert(parsed.data);
+    const { error } = await supabase.from("project_inquiries").insert({ ...parsed.data, phone: parsed.data.phone ?? null, organization: parsed.data.organization ?? null, message: parsed.data.message ?? null });
     if (error) { setStatus("idle"); return setError("Something went wrong. Please try again."); }
     setStatus("done");
   }
