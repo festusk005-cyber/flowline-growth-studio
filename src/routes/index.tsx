@@ -9,9 +9,9 @@ import { InquiryForm } from "@/components/InquiryForm";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kwizera Digital — Websites & Workflow Automation" },
+      { title: "OrbitEdge Digital — Websites & Workflow Automation" },
       { name: "description", content: "Websites, digital marketing and workflow automations that streamline daily operations for schools, clinics and small businesses." },
-      { property: "og:title", content: "Kwizera Digital — Websites & Workflow Automation" },
+      { property: "og:title", content: "OrbitEdge Digital — Websites & Workflow Automation" },
       { property: "og:description", content: "Websites and automations that streamline daily operations for schools, clinics and small businesses." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -54,7 +54,7 @@ function Index() {
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <header className="glass fixed inset-x-0 top-0 z-50 border-b border-border/60">
         <nav className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 text-sm">
-          <a href="#top" className="font-display font-semibold tracking-tight">Kwizera<span className="text-gradient">.</span></a>
+          <a href="#top" className="font-display font-semibold tracking-tight">OrbitEdge<span className="text-gradient">.</span></a>
           <div className="hidden gap-8 text-muted-foreground md:flex">
             <a href="#services" className="hover:text-foreground">Services</a>
             <a href="#sectors" className="hover:text-foreground">Who we help</a>
@@ -143,12 +143,13 @@ function Index() {
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-semibold md:text-6xl">Ready to streamline?</h2>
             <p className="mx-auto mt-6 max-w-lg opacity-75">Tell me about your school, clinic or business. I'll show you what can be automated.</p>
+            <a href="mailto:festusk005@gmail.com" className="mt-4 inline-block font-medium underline underline-offset-4">festusk005@gmail.com</a>
           </div>
           <InquiryForm />
         </R>
       </section>
 
-      <footer className="border-t border-border py-10 text-center text-sm text-muted-foreground">© {new Date().getFullYear()} Kwizera Digital. All rights reserved.</footer>
+      <footer className="border-t border-border py-10 text-center text-sm text-muted-foreground">© {new Date().getFullYear()} OrbitEdge Digital. All rights reserved. · <a href="mailto:festusk005@gmail.com" className="text-foreground hover:underline">festusk005@gmail.com</a></footer>
     </div>
   );
 }

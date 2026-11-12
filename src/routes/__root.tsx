@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kwizera Digital — Websites & Workflow Automation" },
+      { title: "OrbitEdge Digital — Websites & Workflow Automation" },
       { name: "description", content: "Websites, digital marketing and workflow automation for schools, clinics and small businesses." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
