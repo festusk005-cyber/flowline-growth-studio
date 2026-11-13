@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import animation from "@/assets/opening-animation.mp4.asset.json";
-import poster from "@/assets/opening-animation-poster.jpg.asset.json";
+import animation from "@/assets/opening-animation-landscape.mp4.asset.json";
+import poster from "@/assets/opening-animation-landscape-poster.jpg.asset.json";
 
 export function OpeningAnimation() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -29,7 +29,7 @@ export function OpeningAnimation() {
       controls
       preload="metadata"
       aria-label="Human and robotic hands connecting — digital automation animation"
-      className="mx-auto h-[480px] w-full max-w-5xl bg-primary object-contain md:h-[560px]"
+      className="mx-auto aspect-video w-full max-w-5xl rounded-3xl bg-primary object-cover shadow-soft"
     />
   );
 }
