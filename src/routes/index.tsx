@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
-import heroImg from "@/assets/hero-laptop.jpg";
+import { OpeningAnimation } from "@/components/OpeningAnimation";
 import schoolImg from "@/assets/school.jpg";
 import clinicImg from "@/assets/clinic.jpg";
 import businessImg from "@/assets/business.jpg";
@@ -75,7 +75,7 @@ function Index() {
             <a href="#contact" className="rounded-full bg-primary px-7 py-3 font-medium text-primary-foreground shadow-soft transition hover:scale-105">Book a free consultation</a>
             <a href="#services" className="rounded-full border border-border px-7 py-3 font-medium transition hover:bg-secondary">Explore services →</a>
           </R>
-          <R d={550} className="mt-16"><img src={heroImg} alt="Laptop showing a website and workflow automation" width={1600} height={912} className="mx-auto w-full max-w-5xl rounded-3xl shadow-soft" /></R>
+          <R d={550} className="mt-16"><OpeningAnimation /></R>
           <div className="mt-16 flex flex-col items-center" aria-hidden>
             <div className="relative h-40 w-16">
               <div className="animate-dribble absolute left-1/2 top-0 h-8 w-8 -translate-x-1/2 rounded-full bg-accent shadow-soft" style={{ marginLeft: -16 }} />
