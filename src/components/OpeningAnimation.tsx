@@ -1,6 +1,4 @@
 import { useEffect, useRef } from "react";
-import animation from "@/assets/opening-animation-landscape.mp4.asset.json";
-import poster from "@/assets/opening-animation-landscape-poster.jpg.asset.json";
 
 export function OpeningAnimation() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -8,27 +6,37 @@ export function OpeningAnimation() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const motion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+
     const updatePlayback = () => {
-      if (motion.matches) video.pause();
-      else void video.play().catch(() => {});
+      if (motion.matches) {
+        video.pause();
+      } else {
+        void video.play().catch(() => {});
+      }
     };
+
     updatePlayback();
     motion.addEventListener("change", updatePlayback);
-    return () => motion.removeEventListener("change", updatePlayback);
+
+    return () => {
+      motion.removeEventListener("change", updatePlayback);
+    };
   }, []);
 
   return (
     <video
       ref={videoRef}
-      src={animation.url}
-      poster={poster.url}
+      src="/79fde2545627958d92e3b0463132bd02_720w.mp4"
+      autoPlay
       muted
       loop
       playsInline
-      controls
-      preload="metadata"
-      aria-label="Human and robotic hands connecting — digital automation animation"
+      preload="auto"
+      aria-label="Digital automation animation"
       className="mx-auto aspect-video w-full max-w-5xl rounded-3xl bg-primary object-cover shadow-soft scale-x-[-1]"
     />
   );
