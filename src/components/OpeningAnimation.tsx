@@ -29,7 +29,7 @@ export function OpeningAnimation() {
       controls
       preload="metadata"
       aria-label="Human and robotic hands connecting — digital automation animation"
-      className="mx-auto aspect-video w-full max-w-5xl rounded-3xl bg-primary object-cover shadow-soft"
+      className="mx-auto aspect-video w-full max-w-5xl rounded-3xl bg-primary object-cover shadow-soft scale-x-[-1]"
     />
   );
 }
