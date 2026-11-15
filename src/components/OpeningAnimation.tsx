@@ -37,7 +37,7 @@ export function OpeningAnimation() {
       playsInline
       preload="auto"
       aria-label="Digital automation animation"
-      className="mx-auto aspect-video w-full max-w-5xl rounded-3xl bg-primary object-cover shadow-soft scale-x-[-1]"
+      className="mx-auto block h-auto w-full max-w-5xl rounded-3xl bg-primary object-contain shadow-soft scale-x-[-1]"
     />
   );
 }
